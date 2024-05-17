@@ -18,9 +18,9 @@ const MedicineSelection = ({
   getLowestPrice,
 }) => {
   return (
-    <div className="w-[35%] flex flex-col gap-[15px]">
+    <div className="w-[33%] flex flex-col gap-[15px]">
       {/* Form Section starts here  */}
-      <div className="flex gap-[4vw] ">
+      <div className="flex gap-[3.4vw] ">
         <span className="text-[15px]">Form: </span>
         <div className="flex gap-2 flex-wrap">
           {available_forms
