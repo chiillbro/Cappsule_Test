@@ -34,7 +34,7 @@ const MedicineSelection = ({
                 <span
                   className={`p-[4px] cursor-pointer text-[13px] rounded-lg border-2 text-[#555555]  ${
                     selectedForm === form
-                      ? "border-[#112D31] border-[3px] drop-shadow-[0px_0px_0px_rgba(0,197,161)]   shadow-[0px_0px_0px_5px_rgba(0,197,161,0.1)]"
+                      ? "border-[#112D31] border-[3px] shadow-[0px_0px_15px_rgba(0,197,161,0.4)]"
                       : "border-[#ABABAB] "
                   }`}
                 >
@@ -87,7 +87,7 @@ const MedicineSelection = ({
                             : "border-[#ABABAB] "
                         } ${
                           !allNull & (selectedStrength === strength) &&
-                          "drop-shadow-[0px_0px_0px_rgba(0,197,161)]   shadow-[0px_0px_0px_5px_rgba(0,197,161,0.1)]"
+                          "   shadow-[0px_0px_15px_rgba(0,197,161,0.4)]"
                         }`}
                       >
                         {strength}
@@ -151,7 +151,7 @@ const MedicineSelection = ({
                         }
                     ${
                       !allNull & (selectedPackaging === packaging) &&
-                      "drop-shadow-[0px_0px_0px_rgba(0,197,161)]   shadow-[0px_0px_0px_5px_rgba(0,197,161,0.1)]"
+                      "shadow-[0px_0px_15px_rgba(0,197,161,0.4)]"
                     }
                     `}
                       >
