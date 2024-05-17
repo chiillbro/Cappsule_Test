@@ -8,6 +8,7 @@ import BASE_URL, { logo } from "../constants";
 
 const SearchBar = () => {
   const [input, setInput] = useState("");
+  const [loading, setLoading] = useState(false);
 
   const navigate = useNavigate();
 
@@ -15,6 +16,7 @@ const SearchBar = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setLoading(true);
 
     if (input === "") {
       alert("Please enter a search term");
@@ -31,6 +33,8 @@ const SearchBar = () => {
     } catch (error) {
       console.log("Error fetching data: ", error);
       alert("An error occurred while fetching data. Please try again later.");
+    } finally {
+      setLoading(false);
     }
   };
 
@@ -46,7 +50,7 @@ const SearchBar = () => {
 
         <form
           onSubmit={handleSubmit}
-          className="flex xl:w-[1002px] lg:w-[800px] sm:w-[400px] md:w-[600px]     h-[60px] items-center justify-between gap-6  px-8 shadow   rounded-full "
+          className="flex xl:w-[1002px] lg:w-[800px] sm:w-[400px] md:w-[600px]     h-[60px] items-center justify-between gap-6  px-8 shadow-[0px_0px_50px_0px_rgba(0,0,0,0.1)]   rounded-full "
         >
           <div className="flex items-center gap-4">
             <FiSearch className="text-xl" />
@@ -60,7 +64,9 @@ const SearchBar = () => {
               placeholder="Type your medicine here..."
             />
           </div>
-          <button className="text-[#2A527A] font-semibold">Search</button>
+          <button className="text-[#2A527A] font-semibold">
+            {loading ? "searching..." : "search"}
+          </button>
         </form>
         <hr className="xl:w-[1017px] lg:w-[810px] md:w-[610px] sm:w-[410px] w-[350px] -mt-6 h-[1.5px] bg-gray-300 " />
       </div>

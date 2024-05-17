@@ -90,7 +90,7 @@ const DataItem = ({ item: { salt, available_forms, salt_forms_json } }) => {
   };
 
   return (
-    <div className="lg:w-[1007px]  mx-auto px-8  py-6 rounded-3xl bg-gradient-to-r from-20% from-white to-[#E7F1F1] to-100% shadow-xl ">
+    <div className="lg:w-[1007px]  mx-auto px-8  py-6 rounded-3xl Item-gradient   shadow-[0px_0px_30px_0px_rgba(0,0,0,0.1)] ">
       <div className="  flex justify-between items-center">
         {/* Display Medicine Selection and Information */}
         <MedicineSelection
